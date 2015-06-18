@@ -9,14 +9,14 @@ app.directive('productsList', function(){
 			items: '='			
 		},
 
-		link: function postLink(scope, element){
-			console.log(scope.items, element);
+		link: function postLink(scope, elem){
+			console.log(scope.items, elem);
 			if(scope.items){
-			element[0].innerHTML = '<ul>'+ scope.items.map(function(fruit){
-				return '<il>'+fruit+'</li>';
+			elem[0].innerHTML = '<ul>'+ scope.items.map(function(fruits){
+				return '<li>'+fruits+'</li>';
 			}) + '</ul>';
 		}else{
-			element[0].innerHTML = '<p>no dice</p>'
+			elem[0].innerHTML = '<p>no dice</p>'
 		}
 		//templateUrl: 'products.html'
 		}
